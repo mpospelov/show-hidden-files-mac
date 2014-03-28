@@ -12,37 +12,17 @@
 
 #pragma mark - lifecycle
 - (void) awakeFromNib {
-    // obtain a new statusItem from the global NSStatusBar
-    float width = 110.0;
-    statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:width];
-    [statusItem setHighlightMode:YES];
     
-    // create a new NSMenu for the status bar item
-    NSMenu *menu = [[NSMenu alloc] init];
+    eyeIsClosed = (BOOL)[runCommand(@"defaults read com.apple.finder AppleShowAllFiles")
+                   isEqualToString:@"FALSE\n"];
 
-    // create some top level menu items
-    NSMenuItem *first = [[NSMenuItem alloc] initWithTitle:@"Something" action:@selector(doSomethingCool) keyEquivalent:@""];
-    NSMenuItem *second = [[NSMenuItem alloc] initWithTitle:@"More stuff" action:nil keyEquivalent:@""];
-    NSMenuItem *quit = [[NSMenuItem alloc] initWithTitle:@"Quit" action:@selector(quit_application) keyEquivalent:@"Q"];
+    statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength: 20];
+    [statusItem setHighlightMode:NO];
     
-    // NSMenus can also be nested to contain other menus
-    NSMenu *submenu = [[NSMenu alloc] init];
-    NSMenuItem *sub_item1 = [[NSMenuItem alloc] initWithTitle:@"Something Boring" action:@selector(doSomethingBoring) keyEquivalent:@""];
-    NSMenuItem *sub_item2 = [[NSMenuItem alloc] initWithTitle:@"Something Else" action:@selector(doSomethingElse) keyEquivalent:@""];
-    
-    [submenu addItem:sub_item1];
-    [submenu addItem:sub_item2];
-    [second setSubmenu:submenu];
-    
-    [menu addItem:first];
-    [menu addItem:second];
-    [menu addItem:quit];
-    
-    [statusItem setTitle:@"Example Menu"];
-    [statusItem setMenu:menu];
+    (eyeIsClosed) ? [self closeEye] : [self openEye];
 
-    // If your application is background (LSBackgroundOnly) then you need this call
-    // otherwise the window manager will draw other windows on top of your menu
+    [statusItem setAction:@selector(changeIcon:)];
+    
     [NSApp activateIgnoringOtherApps:YES];
 }
 
@@ -50,22 +30,61 @@
     [[NSStatusBar systemStatusBar] removeStatusItem:statusItem];
 }
 
-#pragma mark - Menu Actions
-- (void) doSomethingCool {
-    NSLog(@"Doing something really awesome!");
+- (void)changeIcon:(id)sender {
+    (eyeIsClosed) ? [self showHiddenFiles] : [self hideHiddenFiles];
 }
 
-- (void) doSomethingBoring {
-    NSLog(@"This action is not as exciting as some others");
+- (void)openEye{
+    eyeIsClosed = NO;
+    NSString* imageName = [[NSBundle mainBundle] pathForResource:@"eye_open_17" ofType:@"png"];
+    NSImage* imageObj = [[NSImage alloc] initWithContentsOfFile:imageName];
+    [statusItem setImage:imageObj];
 }
 
-- (void) doSomethingElse {
-    NSLog(@"Another menu item action. Ho hum.");
+- (void)showHiddenFiles{
+    runCommand(@"defaults write com.apple.finder AppleShowAllFiles TRUE;killall Finder;open -a Finder ~/");
+    [self openEye];
 }
 
-- (void) quit_application {
-    NSLog(@"Process is exiting");
-    exit(0);
+- (void)hideHiddenFiles{
+    runCommand(@"defaults write com.apple.finder AppleShowAllFiles FALSE;killall Finder;open -a Finder ~/");
+    [self closeEye];
+}
+
+- (void)closeEye{
+    eyeIsClosed = YES;
+    NSString* imageName = [[NSBundle mainBundle] pathForResource:@"eye_closed_17" ofType:@"png"];
+    NSImage* imageObj = [[NSImage alloc] initWithContentsOfFile:imageName];
+    [statusItem setImage:imageObj];
+}
+
+NSString *runCommand(NSString *commandToRun){
+    NSTask *task;
+    task = [[NSTask alloc] init];
+    [task setLaunchPath: @"/bin/sh"];
+    
+    NSArray *arguments = [NSArray arrayWithObjects:
+                          @"-c" ,
+                          [NSString stringWithFormat:@"%@", commandToRun],
+                          nil];
+    NSLog(@"run command: %@",commandToRun);
+    [task setArguments: arguments];
+    
+    NSPipe *pipe;
+    pipe = [NSPipe pipe];
+    [task setStandardOutput: pipe];
+    
+    NSFileHandle *file;
+    file = [pipe fileHandleForReading];
+    
+    [task launch];
+    
+    NSData *data;
+    data = [file readDataToEndOfFile];
+    
+    NSString *output;
+    output = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
+    return output;
 }
 
 @end

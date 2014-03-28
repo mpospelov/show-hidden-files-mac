@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[AppDelegate awakeFromNib]:AppDelegate.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[runCommand(@&quot;defaults read com.apple.finder AppleShowAllFiles&quot;) isEqualToString:@&quot;FALSE\n&quot;]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

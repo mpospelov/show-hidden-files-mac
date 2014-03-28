@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		983A02E8187ED76A0031E38E /* eye_closed.icns in Resources */ = {isa = PBXBuildFile; fileRef = 983A02E2187ED76A0031E38E /* eye_closed.icns */; };
+		983A02E9187ED76A0031E38E /* eye_open.icns in Resources */ = {isa = PBXBuildFile; fileRef = 983A02E3187ED76A0031E38E /* eye_open.icns */; };
+		98C1ECD4187EF1720066B240 /* eye_closed_17.png in Resources */ = {isa = PBXBuildFile; fileRef = 98C1ECD0187EF1720066B240 /* eye_closed_17.png */; };
+		98C1ECD5187EF1720066B240 /* eye_closed_512.png in Resources */ = {isa = PBXBuildFile; fileRef = 98C1ECD1187EF1720066B240 /* eye_closed_512.png */; };
+		98C1ECD6187EF1720066B240 /* eye_open_17.png in Resources */ = {isa = PBXBuildFile; fileRef = 98C1ECD2187EF1720066B240 /* eye_open_17.png */; };
+		98C1ECD7187EF1720066B240 /* eye_open_512.png in Resources */ = {isa = PBXBuildFile; fileRef = 98C1ECD3187EF1720066B240 /* eye_open_512.png */; };
 		F75A98131709016B00B8F330 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F75A98121709016B00B8F330 /* Cocoa.framework */; };
 		F75A981D1709016B00B8F330 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F75A981B1709016B00B8F330 /* InfoPlist.strings */; };
 		F75A981F1709016B00B8F330 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F75A981E1709016B00B8F330 /* main.m */; };
@@ -16,15 +22,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F75A980F1709016B00B8F330 /* NSStatusItemExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSStatusItemExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		983A02E2187ED76A0031E38E /* eye_closed.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = eye_closed.icns; path = ../icons_for_hidden_files_app/eye_closed.icns; sourceTree = "<group>"; };
+		983A02E3187ED76A0031E38E /* eye_open.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = eye_open.icns; path = ../icons_for_hidden_files_app/eye_open.icns; sourceTree = "<group>"; };
+		98C1ECD0187EF1720066B240 /* eye_closed_17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = eye_closed_17.png; path = ../../Downloads/eye_closed_17.png; sourceTree = "<group>"; };
+		98C1ECD1187EF1720066B240 /* eye_closed_512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = eye_closed_512.png; path = ../../Downloads/eye_closed_512.png; sourceTree = "<group>"; };
+		98C1ECD2187EF1720066B240 /* eye_open_17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = eye_open_17.png; path = ../../Downloads/eye_open_17.png; sourceTree = "<group>"; };
+		98C1ECD3187EF1720066B240 /* eye_open_512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = eye_open_512.png; path = ../../Downloads/eye_open_512.png; sourceTree = "<group>"; };
+		F75A980F1709016B00B8F330 /* HiddenFiles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiddenFiles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F75A98121709016B00B8F330 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		F75A98151709016B00B8F330 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		F75A98161709016B00B8F330 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		F75A98171709016B00B8F330 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		F75A981A1709016B00B8F330 /* NSStatusItemExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NSStatusItemExample-Info.plist"; sourceTree = "<group>"; };
+		F75A981A1709016B00B8F330 /* HiddenFiles-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HiddenFiles-Info.plist"; sourceTree = "<group>"; };
 		F75A981C1709016B00B8F330 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F75A981E1709016B00B8F330 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F75A98201709016B00B8F330 /* NSStatusItemExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSStatusItemExample-Prefix.pch"; sourceTree = "<group>"; };
+		F75A98201709016B00B8F330 /* HiddenFiles-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HiddenFiles-Prefix.pch"; sourceTree = "<group>"; };
 		F75A98221709016B00B8F330 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		F75A98241709016B00B8F330 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F75A98251709016B00B8F330 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -43,9 +55,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		983A02E1187ED75B0031E38E /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				98C1ECD0187EF1720066B240 /* eye_closed_17.png */,
+				98C1ECD1187EF1720066B240 /* eye_closed_512.png */,
+				98C1ECD2187EF1720066B240 /* eye_open_17.png */,
+				98C1ECD3187EF1720066B240 /* eye_open_512.png */,
+				983A02E2187ED76A0031E38E /* eye_closed.icns */,
+				983A02E3187ED76A0031E38E /* eye_open.icns */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		F75A98061709016B00B8F330 = {
 			isa = PBXGroup;
 			children = (
+				983A02E1187ED75B0031E38E /* Images */,
 				F75A98181709016B00B8F330 /* NSStatusItemExample */,
 				F75A98111709016B00B8F330 /* Frameworks */,
 				F75A98101709016B00B8F330 /* Products */,
@@ -55,7 +81,7 @@
 		F75A98101709016B00B8F330 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F75A980F1709016B00B8F330 /* NSStatusItemExample.app */,
+				F75A980F1709016B00B8F330 /* HiddenFiles.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -93,10 +119,10 @@
 		F75A98191709016B00B8F330 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				F75A981A1709016B00B8F330 /* NSStatusItemExample-Info.plist */,
+				F75A981A1709016B00B8F330 /* HiddenFiles-Info.plist */,
 				F75A981B1709016B00B8F330 /* InfoPlist.strings */,
 				F75A981E1709016B00B8F330 /* main.m */,
-				F75A98201709016B00B8F330 /* NSStatusItemExample-Prefix.pch */,
+				F75A98201709016B00B8F330 /* HiddenFiles-Prefix.pch */,
 				F75A98211709016B00B8F330 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
@@ -105,9 +131,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F75A980E1709016B00B8F330 /* NSStatusItemExample */ = {
+		F75A980E1709016B00B8F330 /* HiddenFiles */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F75A982C1709016B00B8F330 /* Build configuration list for PBXNativeTarget "NSStatusItemExample" */;
+			buildConfigurationList = F75A982C1709016B00B8F330 /* Build configuration list for PBXNativeTarget "HiddenFiles" */;
 			buildPhases = (
 				F75A980B1709016B00B8F330 /* Sources */,
 				F75A980C1709016B00B8F330 /* Frameworks */,
@@ -117,9 +143,9 @@
 			);
 			dependencies = (
 			);
-			name = NSStatusItemExample;
+			name = HiddenFiles;
 			productName = NSStatusItemExample;
-			productReference = F75A980F1709016B00B8F330 /* NSStatusItemExample.app */;
+			productReference = F75A980F1709016B00B8F330 /* HiddenFiles.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -131,7 +157,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Tim Jarratt";
 			};
-			buildConfigurationList = F75A980A1709016B00B8F330 /* Build configuration list for PBXProject "NSStatusItemExample" */;
+			buildConfigurationList = F75A980A1709016B00B8F330 /* Build configuration list for PBXProject "HiddenFiles" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -143,7 +169,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F75A980E1709016B00B8F330 /* NSStatusItemExample */,
+				F75A980E1709016B00B8F330 /* HiddenFiles */,
 			);
 		};
 /* End PBXProject section */
@@ -153,8 +179,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98C1ECD5187EF1720066B240 /* eye_closed_512.png in Resources */,
 				F75A981D1709016B00B8F330 /* InfoPlist.strings in Resources */,
+				98C1ECD4187EF1720066B240 /* eye_closed_17.png in Resources */,
+				98C1ECD7187EF1720066B240 /* eye_open_512.png in Resources */,
 				F75A98231709016B00B8F330 /* Credits.rtf in Resources */,
+				98C1ECD6187EF1720066B240 /* eye_open_17.png in Resources */,
+				983A02E9187ED76A0031E38E /* eye_open.icns in Resources */,
+				983A02E8187ED76A0031E38E /* eye_closed.icns in Resources */,
 				F75A98291709016B00B8F330 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,9 +297,9 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "NSStatusItemExample/NSStatusItemExample-Prefix.pch";
-				INFOPLIST_FILE = "NSStatusItemExample/NSStatusItemExample-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "NSStatusItemExample/HiddenFiles-Prefix.pch";
+				INFOPLIST_FILE = "NSStatusItemExample/HiddenFiles-Info.plist";
+				PRODUCT_NAME = HiddenFiles;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -277,9 +309,9 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "NSStatusItemExample/NSStatusItemExample-Prefix.pch";
-				INFOPLIST_FILE = "NSStatusItemExample/NSStatusItemExample-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "NSStatusItemExample/HiddenFiles-Prefix.pch";
+				INFOPLIST_FILE = "NSStatusItemExample/HiddenFiles-Info.plist";
+				PRODUCT_NAME = HiddenFiles;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -287,7 +319,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F75A980A1709016B00B8F330 /* Build configuration list for PBXProject "NSStatusItemExample" */ = {
+		F75A980A1709016B00B8F330 /* Build configuration list for PBXProject "HiddenFiles" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F75A982A1709016B00B8F330 /* Debug */,
@@ -296,13 +328,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F75A982C1709016B00B8F330 /* Build configuration list for PBXNativeTarget "NSStatusItemExample" */ = {
+		F75A982C1709016B00B8F330 /* Build configuration list for PBXNativeTarget "HiddenFiles" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F75A982D1709016B00B8F330 /* Debug */,
 				F75A982E1709016B00B8F330 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
